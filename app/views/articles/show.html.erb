@@ -1,0 +1,4 @@
+<h1><%= @article.title %></h1> <%= link_to 'edit', edit_article_path(params[:id]), class: 'btn btn-primary' %>
+<p><%=  @article.content %></p>
+
+<%= link_to 'Back to index', articles_path, class: 'btn btn-warning' %>

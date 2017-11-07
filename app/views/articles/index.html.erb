@@ -1,0 +1,13 @@
+<div class="container">
+  <div>
+    <%= link_to "new article", new_article_path, class: 'btn btn-primary' %>
+  </div>
+  <ul>
+    <% @articles.each do |article| %>
+    <li><h2><%= article.title %></h2><span><%=  article.content %></span></li>
+    <%= link_to "Go to article", article_path(article), class: 'btn btn-primary' %>
+    <%= link_to "Delete article", article_path(article), method: :delete, class: 'btn btn-danger' %>
+
+    <% end  %>
+  </ul>
+</div>
